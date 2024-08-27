@@ -76,9 +76,9 @@
             this.label5.Location = new System.Drawing.Point(121, 227);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 20);
+            this.label5.Size = new System.Drawing.Size(89, 20);
             this.label5.TabIndex = 44;
-            this.label5.Text = "Date";
+            this.label5.Text = "Leave Date";
             // 
             // label4
             // 
