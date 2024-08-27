@@ -1,0 +1,15 @@
+D:\GitHub\grifindo-employee-lms\GrifindoLeaveMS\obj\Release\GrifindoEmployeeLMS.csproj.AssemblyReference.cache
+D:\GitHub\grifindo-employee-lms\GrifindoLeaveMS\obj\Release\GrifindoLeaveMS.EApplyLeave.resources
+D:\GitHub\grifindo-employee-lms\GrifindoLeaveMS\obj\Release\GrifindoLeaveMS.ELeaveReport.resources
+D:\GitHub\grifindo-employee-lms\GrifindoLeaveMS\obj\Release\GrifindoLeaveMS.ELeaveStatus.resources
+D:\GitHub\grifindo-employee-lms\GrifindoLeaveMS\obj\Release\GrifindoLeaveMS.E_Dashboard.resources
+D:\GitHub\grifindo-employee-lms\GrifindoLeaveMS\obj\Release\GrifindoLeaveMS.FrmEmployee.resources
+D:\GitHub\grifindo-employee-lms\GrifindoLeaveMS\obj\Release\GrifindoEmployeeLMS.Properties.Resources.resources
+D:\GitHub\grifindo-employee-lms\GrifindoLeaveMS\obj\Release\GrifindoEmployeeLMS.UserLogin.resources
+D:\GitHub\grifindo-employee-lms\GrifindoLeaveMS\obj\Release\GrifindoEmployeeLMS.csproj.GenerateResource.cache
+D:\GitHub\grifindo-employee-lms\GrifindoLeaveMS\obj\Release\GrifindoEmployeeLMS.csproj.CoreCompileInputs.cache
+D:\GitHub\grifindo-employee-lms\GrifindoLeaveMS\bin\Release\GrifindoEmployeeLMS.exe.config
+D:\GitHub\grifindo-employee-lms\GrifindoLeaveMS\bin\Release\GrifindoEmployeeLMS.exe
+D:\GitHub\grifindo-employee-lms\GrifindoLeaveMS\bin\Release\GrifindoEmployeeLMS.pdb
+D:\GitHub\grifindo-employee-lms\GrifindoLeaveMS\obj\Release\GrifindoEmployeeLMS.exe
+D:\GitHub\grifindo-employee-lms\GrifindoLeaveMS\obj\Release\GrifindoEmployeeLMS.pdb
