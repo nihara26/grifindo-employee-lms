@@ -76,6 +76,21 @@
     <Compile Include="FrmEmployee.Designer.cs">
       <DependentUpon>FrmEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="GrifindoLeaveMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GrifindoLeaveMSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GrifindoLeaveMSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GrifindoLeaveMSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GrifindoLeaveMSDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GrifindoLeaveMSDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserLogin.cs">
@@ -112,6 +127,39 @@
     <EmbeddedResource Include="UserLogin.resx">
       <DependentUpon>UserLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="GrifindoLeaveMSDataSet.xsc">
+      <DependentUpon>GrifindoLeaveMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GrifindoLeaveMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GrifindoLeaveMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GrifindoLeaveMSDataSet.xss">
+      <DependentUpon>GrifindoLeaveMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GrifindoLeaveMSDataSet1.xsc">
+      <DependentUpon>GrifindoLeaveMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GrifindoLeaveMSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GrifindoLeaveMSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GrifindoLeaveMSDataSet1.xss">
+      <DependentUpon>GrifindoLeaveMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GrifindoLeaveMSDataSet2.xsc">
+      <DependentUpon>GrifindoLeaveMSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GrifindoLeaveMSDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GrifindoLeaveMSDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GrifindoLeaveMSDataSet2.xss">
+      <DependentUpon>GrifindoLeaveMSDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
