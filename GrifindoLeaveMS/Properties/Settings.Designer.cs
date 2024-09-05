@@ -22,5 +22,16 @@ namespace GrifindoEmployeeLMS.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ASUS_NEBULA\\SQLEXPRESS;Initial Catalog=GrifindoLeaveMS;Integrated Sec" +
+            "urity=True;Encrypt=False")]
+        public string GrifindoLeaveMSConnectionString {
+            get {
+                return ((string)(this["GrifindoLeaveMSConnectionString"]));
+            }
+        }
     }
 }

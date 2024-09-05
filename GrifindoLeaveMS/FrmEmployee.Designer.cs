@@ -41,9 +41,9 @@
             // 
             // btnELogin
             // 
-            this.btnELogin.BackColor = System.Drawing.Color.White;
+            this.btnELogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             this.btnELogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnELogin.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btnELogin.ForeColor = System.Drawing.SystemColors.Window;
             this.btnELogin.Location = new System.Drawing.Point(308, 369);
             this.btnELogin.Name = "btnELogin";
             this.btnELogin.Size = new System.Drawing.Size(148, 42);

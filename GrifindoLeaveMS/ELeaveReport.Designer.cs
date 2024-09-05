@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ELeaveReport));
             this.btnBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,7 +43,18 @@
             this.dataGridELeaveTable = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.txtsearch = new System.Windows.Forms.TextBox();
+            this.btnView = new System.Windows.Forms.Button();
+            this.grifindoLeaveMSDataSet2 = new GrifindoEmployeeLMS.GrifindoLeaveMSDataSet2();
+            this.leaveHistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.leaveHistoryTableAdapter = new GrifindoEmployeeLMS.GrifindoLeaveMSDataSet2TableAdapters.LeaveHistoryTableAdapter();
+            this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leaveCategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leaveDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actionDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridELeaveTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grifindoLeaveMSDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leaveHistoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -157,26 +169,34 @@
             // 
             // dataGridELeaveTable
             // 
+            this.dataGridELeaveTable.AutoGenerateColumns = false;
             this.dataGridELeaveTable.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridELeaveTable.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridELeaveTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridELeaveTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.employeeIDDataGridViewTextBoxColumn,
+            this.leaveCategoryDataGridViewTextBoxColumn,
+            this.leaveDateDataGridViewTextBoxColumn,
+            this.actionDateDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn});
+            this.dataGridELeaveTable.DataSource = this.leaveHistoryBindingSource;
             this.dataGridELeaveTable.Location = new System.Drawing.Point(406, 179);
             this.dataGridELeaveTable.Name = "dataGridELeaveTable";
             this.dataGridELeaveTable.RowHeadersWidth = 51;
             this.dataGridELeaveTable.RowTemplate.Height = 24;
-            this.dataGridELeaveTable.Size = new System.Drawing.Size(703, 234);
+            this.dataGridELeaveTable.Size = new System.Drawing.Size(701, 234);
             this.dataGridELeaveTable.TabIndex = 76;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(46, 104);
+            this.label7.Location = new System.Drawing.Point(47, 104);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 20);
+            this.label7.Size = new System.Drawing.Size(109, 20);
             this.label7.TabIndex = 79;
-            this.label7.Text = "Search Emp.No";
+            this.label7.Text = "Search EmpID";
             // 
             // txtsearch
             // 
@@ -187,12 +207,81 @@
             this.txtsearch.Size = new System.Drawing.Size(229, 27);
             this.txtsearch.TabIndex = 78;
             // 
+            // btnView
+            // 
+            this.btnView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(255)))));
+            this.btnView.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.ForeColor = System.Drawing.Color.White;
+            this.btnView.Location = new System.Drawing.Point(299, 122);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(85, 35);
+            this.btnView.TabIndex = 80;
+            this.btnView.Text = "View";
+            this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
+            // grifindoLeaveMSDataSet2
+            // 
+            this.grifindoLeaveMSDataSet2.DataSetName = "GrifindoLeaveMSDataSet2";
+            this.grifindoLeaveMSDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // leaveHistoryBindingSource
+            // 
+            this.leaveHistoryBindingSource.DataMember = "LeaveHistory";
+            this.leaveHistoryBindingSource.DataSource = this.grifindoLeaveMSDataSet2;
+            // 
+            // leaveHistoryTableAdapter
+            // 
+            this.leaveHistoryTableAdapter.ClearBeforeFill = true;
+            // 
+            // employeeIDDataGridViewTextBoxColumn
+            // 
+            this.employeeIDDataGridViewTextBoxColumn.DataPropertyName = "EmployeeID";
+            this.employeeIDDataGridViewTextBoxColumn.HeaderText = "EmployeeID";
+            this.employeeIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeIDDataGridViewTextBoxColumn.Name = "employeeIDDataGridViewTextBoxColumn";
+            this.employeeIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // leaveCategoryDataGridViewTextBoxColumn
+            // 
+            this.leaveCategoryDataGridViewTextBoxColumn.DataPropertyName = "LeaveCategory";
+            this.leaveCategoryDataGridViewTextBoxColumn.HeaderText = "LeaveCategory";
+            this.leaveCategoryDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.leaveCategoryDataGridViewTextBoxColumn.Name = "leaveCategoryDataGridViewTextBoxColumn";
+            this.leaveCategoryDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // leaveDateDataGridViewTextBoxColumn
+            // 
+            this.leaveDateDataGridViewTextBoxColumn.DataPropertyName = "LeaveDate";
+            this.leaveDateDataGridViewTextBoxColumn.HeaderText = "LeaveDate";
+            this.leaveDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.leaveDateDataGridViewTextBoxColumn.Name = "leaveDateDataGridViewTextBoxColumn";
+            this.leaveDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // actionDateDataGridViewTextBoxColumn
+            // 
+            this.actionDateDataGridViewTextBoxColumn.DataPropertyName = "ActionDate";
+            this.actionDateDataGridViewTextBoxColumn.HeaderText = "ActionDate";
+            this.actionDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.actionDateDataGridViewTextBoxColumn.Name = "actionDateDataGridViewTextBoxColumn";
+            this.actionDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.Width = 125;
+            // 
             // ELeaveReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1150, 451);
+            this.Controls.Add(this.btnView);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtsearch);
             this.Controls.Add(this.label6);
@@ -208,7 +297,10 @@
             this.Controls.Add(this.btnBack);
             this.Name = "ELeaveReport";
             this.Text = "ELeaveReport";
+            this.Load += new System.EventHandler(this.ELeaveReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridELeaveTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grifindoLeaveMSDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leaveHistoryBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,5 +321,14 @@
         private System.Windows.Forms.DataGridView dataGridELeaveTable;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtsearch;
+        private System.Windows.Forms.Button btnView;
+        private GrifindoEmployeeLMS.GrifindoLeaveMSDataSet2 grifindoLeaveMSDataSet2;
+        private System.Windows.Forms.BindingSource leaveHistoryBindingSource;
+        private GrifindoEmployeeLMS.GrifindoLeaveMSDataSet2TableAdapters.LeaveHistoryTableAdapter leaveHistoryTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn leaveCategoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn leaveDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actionDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
     }
 }
