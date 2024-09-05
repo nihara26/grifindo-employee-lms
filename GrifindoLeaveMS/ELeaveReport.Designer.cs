@@ -41,20 +41,20 @@
             this.txtRemainSL = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridELeaveTable = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtsearch = new System.Windows.Forms.TextBox();
-            this.btnView = new System.Windows.Forms.Button();
-            this.grifindoLeaveMSDataSet2 = new GrifindoEmployeeLMS.GrifindoLeaveMSDataSet2();
-            this.leaveHistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.leaveHistoryTableAdapter = new GrifindoEmployeeLMS.GrifindoLeaveMSDataSet2TableAdapters.LeaveHistoryTableAdapter();
             this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leaveCategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leaveDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actionDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leaveHistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.grifindoLeaveMSDataSet2 = new GrifindoEmployeeLMS.GrifindoLeaveMSDataSet2();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtsearch = new System.Windows.Forms.TextBox();
+            this.btnView = new System.Windows.Forms.Button();
+            this.leaveHistoryTableAdapter = new GrifindoEmployeeLMS.GrifindoLeaveMSDataSet2TableAdapters.LeaveHistoryTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridELeaveTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grifindoLeaveMSDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leaveHistoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grifindoLeaveMSDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -133,6 +133,7 @@
             this.txtRemainAL.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtRemainAL.Location = new System.Drawing.Point(271, 257);
             this.txtRemainAL.Name = "txtRemainAL";
+            this.txtRemainAL.ReadOnly = true;
             this.txtRemainAL.Size = new System.Drawing.Size(71, 24);
             this.txtRemainAL.TabIndex = 73;
             // 
@@ -143,6 +144,7 @@
             this.txtRemainCL.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtRemainCL.Location = new System.Drawing.Point(271, 303);
             this.txtRemainCL.Name = "txtRemainCL";
+            this.txtRemainCL.ReadOnly = true;
             this.txtRemainCL.Size = new System.Drawing.Size(71, 24);
             this.txtRemainCL.TabIndex = 74;
             // 
@@ -153,6 +155,7 @@
             this.txtRemainSL.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtRemainSL.Location = new System.Drawing.Point(271, 349);
             this.txtRemainSL.Name = "txtRemainSL";
+            this.txtRemainSL.ReadOnly = true;
             this.txtRemainSL.Size = new System.Drawing.Size(71, 24);
             this.txtRemainSL.TabIndex = 75;
             // 
@@ -186,54 +189,6 @@
             this.dataGridELeaveTable.RowTemplate.Height = 24;
             this.dataGridELeaveTable.Size = new System.Drawing.Size(701, 234);
             this.dataGridELeaveTable.TabIndex = 76;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(47, 104);
-            this.label7.Margin = new System.Windows.Forms.Padding(0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 20);
-            this.label7.TabIndex = 79;
-            this.label7.Text = "Search EmpID";
-            // 
-            // txtsearch
-            // 
-            this.txtsearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsearch.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtsearch.Location = new System.Drawing.Point(50, 127);
-            this.txtsearch.Name = "txtsearch";
-            this.txtsearch.Size = new System.Drawing.Size(229, 27);
-            this.txtsearch.TabIndex = 78;
-            // 
-            // btnView
-            // 
-            this.btnView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(255)))));
-            this.btnView.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnView.ForeColor = System.Drawing.Color.White;
-            this.btnView.Location = new System.Drawing.Point(299, 122);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(85, 35);
-            this.btnView.TabIndex = 80;
-            this.btnView.Text = "View";
-            this.btnView.UseVisualStyleBackColor = false;
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
-            // 
-            // grifindoLeaveMSDataSet2
-            // 
-            this.grifindoLeaveMSDataSet2.DataSetName = "GrifindoLeaveMSDataSet2";
-            this.grifindoLeaveMSDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // leaveHistoryBindingSource
-            // 
-            this.leaveHistoryBindingSource.DataMember = "LeaveHistory";
-            this.leaveHistoryBindingSource.DataSource = this.grifindoLeaveMSDataSet2;
-            // 
-            // leaveHistoryTableAdapter
-            // 
-            this.leaveHistoryTableAdapter.ClearBeforeFill = true;
             // 
             // employeeIDDataGridViewTextBoxColumn
             // 
@@ -275,6 +230,54 @@
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             this.statusDataGridViewTextBoxColumn.Width = 125;
             // 
+            // leaveHistoryBindingSource
+            // 
+            this.leaveHistoryBindingSource.DataMember = "LeaveHistory";
+            this.leaveHistoryBindingSource.DataSource = this.grifindoLeaveMSDataSet2;
+            // 
+            // grifindoLeaveMSDataSet2
+            // 
+            this.grifindoLeaveMSDataSet2.DataSetName = "GrifindoLeaveMSDataSet2";
+            this.grifindoLeaveMSDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(47, 104);
+            this.label7.Margin = new System.Windows.Forms.Padding(0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(109, 20);
+            this.label7.TabIndex = 79;
+            this.label7.Text = "Search EmpID";
+            // 
+            // txtsearch
+            // 
+            this.txtsearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsearch.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtsearch.Location = new System.Drawing.Point(50, 127);
+            this.txtsearch.Name = "txtsearch";
+            this.txtsearch.Size = new System.Drawing.Size(229, 27);
+            this.txtsearch.TabIndex = 78;
+            // 
+            // btnView
+            // 
+            this.btnView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(255)))));
+            this.btnView.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.ForeColor = System.Drawing.Color.White;
+            this.btnView.Location = new System.Drawing.Point(299, 122);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(85, 35);
+            this.btnView.TabIndex = 80;
+            this.btnView.Text = "View";
+            this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
+            // leaveHistoryTableAdapter
+            // 
+            this.leaveHistoryTableAdapter.ClearBeforeFill = true;
+            // 
             // ELeaveReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -299,8 +302,8 @@
             this.Text = "ELeaveReport";
             this.Load += new System.EventHandler(this.ELeaveReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridELeaveTable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grifindoLeaveMSDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leaveHistoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grifindoLeaveMSDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
