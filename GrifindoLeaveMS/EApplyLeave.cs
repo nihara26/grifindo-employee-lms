@@ -210,16 +210,16 @@ namespace GrifindoLeaveMS
                     // Retrieve the selected row
                     DataGridViewRow row = dataGridApplyleaves.SelectedRows[0];
 
-                    // Populate form fields with the data from the selected row
-                    txtEmpID.Text = row.Cells["EmployeeID"].Value.ToString();
-                    cmbLeaveCategory.Text = row.Cells["LeaveCategory"].Value.ToString();
-                    dtpLeaveDate.Value = Convert.ToDateTime(row.Cells["LeaveDate"].Value);
+                    // Check the actual names of the columns or use column indices
+                    txtEmpID.Text = row.Cells[0].Value.ToString();  // Assuming EmployeeID is in the first column
+                    cmbLeaveCategory.Text = row.Cells[1].Value.ToString();  // LeaveCategory
+                    dtpLeaveDate.Value = Convert.ToDateTime(row.Cells[2].Value);  // LeaveDate
 
                     // If it's a short leave, populate StartTime and EndTime
                     if (cmbLeaveCategory.Text == "Short")
                     {
-                        mtbStartTimeAL.Text = row.Cells["StartTime"].Value != DBNull.Value ? row.Cells["StartTime"].Value.ToString() : string.Empty;
-                        mtbEndTimeAL.Text = row.Cells["EndTime"].Value != DBNull.Value ? row.Cells["EndTime"].Value.ToString() : string.Empty;
+                        mtbStartTimeAL.Text = row.Cells[3].Value != DBNull.Value ? row.Cells[3].Value.ToString() : string.Empty;
+                        mtbEndTimeAL.Text = row.Cells[4].Value != DBNull.Value ? row.Cells[4].Value.ToString() : string.Empty;
                     }
                     else
                     {
