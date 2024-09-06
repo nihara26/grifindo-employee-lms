@@ -41,6 +41,9 @@
             this.txtRemainSL = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridELeaveTable = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtsearch = new System.Windows.Forms.TextBox();
+            this.btnView = new System.Windows.Forms.Button();
             this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leaveCategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leaveDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,9 +51,6 @@
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leaveHistoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grifindoLeaveMSDataSet2 = new GrifindoEmployeeLMS.GrifindoLeaveMSDataSet2();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtsearch = new System.Windows.Forms.TextBox();
-            this.btnView = new System.Windows.Forms.Button();
             this.leaveHistoryTableAdapter = new GrifindoEmployeeLMS.GrifindoLeaveMSDataSet2TableAdapters.LeaveHistoryTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridELeaveTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leaveHistoryBindingSource)).BeginInit();
@@ -189,6 +189,41 @@
             this.dataGridELeaveTable.RowTemplate.Height = 24;
             this.dataGridELeaveTable.Size = new System.Drawing.Size(701, 234);
             this.dataGridELeaveTable.TabIndex = 76;
+            this.dataGridELeaveTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridELeaveTable_CellContentClick);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(47, 104);
+            this.label7.Margin = new System.Windows.Forms.Padding(0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(109, 20);
+            this.label7.TabIndex = 79;
+            this.label7.Text = "Search EmpID";
+            // 
+            // txtsearch
+            // 
+            this.txtsearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsearch.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtsearch.Location = new System.Drawing.Point(50, 127);
+            this.txtsearch.Name = "txtsearch";
+            this.txtsearch.Size = new System.Drawing.Size(229, 27);
+            this.txtsearch.TabIndex = 78;
+            // 
+            // btnView
+            // 
+            this.btnView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(255)))));
+            this.btnView.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.ForeColor = System.Drawing.Color.White;
+            this.btnView.Location = new System.Drawing.Point(299, 122);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(85, 35);
+            this.btnView.TabIndex = 80;
+            this.btnView.Text = "View";
+            this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // employeeIDDataGridViewTextBoxColumn
             // 
@@ -239,40 +274,6 @@
             // 
             this.grifindoLeaveMSDataSet2.DataSetName = "GrifindoLeaveMSDataSet2";
             this.grifindoLeaveMSDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(47, 104);
-            this.label7.Margin = new System.Windows.Forms.Padding(0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 20);
-            this.label7.TabIndex = 79;
-            this.label7.Text = "Search EmpID";
-            // 
-            // txtsearch
-            // 
-            this.txtsearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsearch.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtsearch.Location = new System.Drawing.Point(50, 127);
-            this.txtsearch.Name = "txtsearch";
-            this.txtsearch.Size = new System.Drawing.Size(229, 27);
-            this.txtsearch.TabIndex = 78;
-            // 
-            // btnView
-            // 
-            this.btnView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(255)))));
-            this.btnView.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnView.ForeColor = System.Drawing.Color.White;
-            this.btnView.Location = new System.Drawing.Point(299, 122);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(85, 35);
-            this.btnView.TabIndex = 80;
-            this.btnView.Text = "View";
-            this.btnView.UseVisualStyleBackColor = false;
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // leaveHistoryTableAdapter
             // 

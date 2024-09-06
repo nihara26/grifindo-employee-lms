@@ -41,16 +41,24 @@ namespace GrifindoLeaveMS
                 // Retrieve the selected row
                 DataGridViewRow row = dataGridDefineR.SelectedRows[0];
 
-                // Check the leave status
-                string status = row.Cells["Status"].Value.ToString();
+                // Ensure the Status column exists before referencing it
+                if (row.Cells["Status"] != null)
+                {
+                    string status = row.Cells["Status"].Value?.ToString();
+                    if (status != "Pending")
+                    {
+                        MessageBox.Show("You cannot delete this leave record as it has already been " + status + ".", "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return; // Exit the method if the leave is approved or rejected
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Status column is missing in the data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Exit if the Status column is missing
+                }
+
                 string EmployeeID = row.Cells["EmployeeID"].Value.ToString();
                 DateTime LeaveDate = Convert.ToDateTime(row.Cells["LeaveDate"].Value);
-
-                if (status != "Pending")
-                {
-                    MessageBox.Show("You cannot delete this leave record as it has already been " + status + ".", "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return; // Exit the method if the leave is approved or rejected
-                }
 
                 // Confirm the deletion with the user
                 DialogResult result = MessageBox.Show("Are you sure you want to delete this leave record?", "Delete Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
