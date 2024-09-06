@@ -128,6 +128,11 @@ namespace GrifindoLeaveMS
                 con.Close();
             }
         }
+
+        private void dataGridELeaveTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
     
 }
